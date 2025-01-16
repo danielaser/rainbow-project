@@ -215,7 +215,7 @@
 
 .kit-container {
     padding: 150px;
-    background-color: #1962c1;
+    background-color: #0052bd;
 }
 
 .information-container {
@@ -353,9 +353,59 @@
 
         span {
             text-align: center;
-            color: #0e76fd;
+            color: #3c99fa;
             font-weight: 600;
         }
+    }
+}
+
+.options {
+    margin-top: 50px;
+
+    ul {
+        list-style: none;
+        display: flex;
+        gap: 50px;
+    }
+
+    &__text {
+        font-size: 22px;
+        font-weight: 800;
+        color: #8ecaf9;
+    }
+
+    &__button {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        border: none;
+        box-shadow: inset 0 0 0 1px hsla(0, 0%, 100%, .12);
+        background: #ffffff52;
+        margin-right: 10px;
+    }
+
+    #blue {
+        background-color: #0e76fd;
+    }
+
+    #dark-blue {
+        background-color: #5f5af9;
+    }
+
+    #pink {
+        background-color: #ff5ca0;
+    }
+
+    #red {
+        background-color: #fa423c;
+    }
+
+    #orange {
+        background-color: #ff801f;
+    }
+
+    #green {
+        background-color: #1db847;
     }
 
 }
