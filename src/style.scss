@@ -1,0 +1,361 @@
+@use './reset';
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px;
+    width: 1490px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    translate: -50%;
+
+    &__title {
+        color: #fff;
+        font-size: 20px;
+    }
+
+    &__badge {
+        background-color: #242529;
+        color: #ffffff7a;
+        font-weight: 600;
+        height: 22px;
+        line-height: 1;
+        padding: 7px;
+        border-radius: 15px;
+        font-size: 12px;
+    }
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+}
+
+.navigation__item {
+    border-radius: 30%;
+
+
+}
+
+.header__button {
+    padding: 10px 14px 10px 14px;
+    border-radius: 10px;
+    color: #fff;
+    background: #3898ff;
+    font-size: 15px;
+    font-weight: 600;
+
+}
+
+.hero {
+    background-color: hsla(0, 0%, 0%, 1);
+    background-image: radial-gradient(circle at 50% 46%, hsla(236.6470426671645, 90%, 28%, 1) 0%, transparent 38.41513019140126%), radial-gradient(circle at 93% 95%, hsla(0, 0%, 0%, 1) 0%, transparent 66%), radial-gradient(circle at 89% 8%, hsla(307, 0%, 0%, 1) 0%, transparent 150%);
+    background-blend-mode: normal, normal, normal;
+    padding: 170px;
+    padding-bottom: 100px;
+}
+
+.hero-container {
+    display: grid;
+    justify-items: center;
+    gap: 10px;
+    line-height: 1;
+
+    &__title {
+        color: #7a70ff;
+        font-size: 40px;
+        font-weight: 800;
+    }
+
+    &__second-title {
+        color: #fff;
+        font-size: 50px;
+        font-weight: 800;
+        letter-spacing: -0.65px;
+    }
+
+    &__text {
+        color: #fff;
+        font-size: 30px;
+
+    }
+
+    &__button {
+        padding: 15px 25px 15px 25px;
+        border-radius: 30px;
+        color: #ffffffd9;
+        background-image: linear-gradient(to right, #3898ff, #7a70ff);
+        font-size: 15px;
+        font-weight: 800;
+        text-decoration: none;
+        margin-top: 20px;
+    }
+
+
+}
+
+.code-container {
+    justify-content: space-evenly;
+    height: 44px;
+    line-height: 1;
+    background: #242529;
+    width: 35%;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 30px;
+    margin-top: 30px;
+
+    &__text {
+        color: #fff;
+        font-size: 15px;
+    }
+
+    &__button {
+        background-color: transparent;
+        color: #ffffff59;
+        border: none;
+    }
+}
+
+.picture-container {
+    position: relative;
+    top: 70px;
+
+    &__first-img {
+        position: absolute;
+        z-index: 1;
+    }
+
+    &__second-img {
+        position: relative;
+        z-index: 2;
+        margin-left: 510px;
+    }
+
+    &__third-img {
+        position: relative;
+        z-index: 3;
+        bottom: 30px;
+        margin-left: -150px;
+    }
+}
+
+.team-container {
+    margin-top: 70px;
+    justify-items: center;
+
+    &__text {
+        color: #fff;
+        font-size: 24px;
+        width: 60%;
+        text-align: center;
+    }
+}
+
+.bento {
+    margin: 40px auto;
+    max-width: 940px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 30px;
+
+    &__item {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        color: #ffffffc8;
+        font-size: 18px;
+        text-decoration: none;
+        justify-items: center;
+
+        img {
+            border-radius: 50px;
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    $distributions: (
+        1: 1 / 2,
+        2: 2 / 4,
+        3: 4 / 6,
+        4: 6 / 8,
+        5: 8 / 10,
+        6: 10 / 12,
+        7: 1 / 2,
+        8: 2 / 4,
+        9: 4 / 6,
+        10: 6 / 8,
+        11: 8 / 10,
+        12: 10 / 12,
+        13: 1 / 2,
+        14: 2 / 4,
+        15: 4 / 6,
+        16: 6 / 8,
+        17: 8 / 10,
+        18: 10 / 12,
+        19: 1 / 2,
+        20: 2 / 4,
+        21: 4 / 6,
+        22: 6 / 8,
+        23: 8 / 10,
+        24: 10 / 12,
+    );
+
+@each $key, $value in $distributions {
+    & :nth-child(#{$key}) {
+        grid-column: $value;
+    }
+}
+}
+
+
+.kit-container {
+    padding: 150px;
+    background-color: #1962c1;
+}
+
+.information-container {
+    text-align: center;
+    gap: 10px;
+    line-height: 1;
+    padding-inline: 250px;
+    margin-bottom: 70px;
+
+    &__title {
+        color: #fff;
+        font-size: 50px;
+        font-weight: 800;
+        margin-bottom: 40px;
+    }
+
+    &__text {
+        color: #fff;
+        font-size: 25px;
+        font-weight: 700;
+        letter-spacing: -0.65px;
+    }
+}
+
+.modal {
+    justify-items: center;
+}
+
+.modal-content {
+    padding: 20px 20px 0 20px;
+    width: 712px;
+    height: 470px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 14px 5px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
+}
+
+.modal-nav {
+    min-width: 245px;
+    overflow-y: scroll;
+
+    h3 {
+        font-size: 20px;
+        font-weight: 800;
+    }
+}
+
+.menu {
+    list-style: none;
+    padding-bottom: 20px;
+
+    h5 {
+        margin-top: 20px;
+        color: #7a7272;
+        font-size: 14px;
+    }
+
+    i {
+        height: 30px;
+        border: 1px solid #c2bcbc52;
+        border-radius: 8px;
+    }
+
+    svg {
+        border-radius: 8px;
+    }
+}
+
+.sub-menu {
+    list-style: none;
+
+    &__item {
+        align-items: center;
+        display: flex;
+        gap: 10px;
+        margin-top: 10px;
+    }
+}
+
+.modal-information {
+    padding-left: 20px;
+
+    header {
+        text-align: right;
+    }
+
+    &__button {
+        padding: 8px 10px 5px 10px;
+        border-radius: 50%;
+        border: none;
+        color: #242529;
+    }
+
+    main {
+        justify-items: center;
+        margin-top: 20px;
+    }
+
+    .banner-container {
+        justify-items: center;
+        margin-top: 25px;
+
+        &__banner {
+            display: flex;
+            width: 70%;
+            gap: 10px;
+            align-items: center;
+
+            h5 {
+                font-size: 15px;
+            }
+
+            p {
+                color: #7a7272;
+                font-size: 14px;
+            }
+        }
+    }
+
+    footer {
+        display: grid;
+        justify-content: space-evenly;
+        gap: 10px;
+        margin-top: 20px;
+
+        button {
+            background-color: #0e76fd;
+            padding: 8px 20px 8px 20px;
+            border-radius: 30px;
+            border: none;
+            color: #fff;
+            font-weight: 600;
+        }
+
+        span {
+            text-align: center;
+            color: #0e76fd;
+            font-weight: 600;
+        }
+    }
+
+}

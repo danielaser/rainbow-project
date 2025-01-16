@@ -21,14 +21,16 @@
     content="Design for rainbow kit wallet. Design tools such as layers, options and settings to connect wallet." />
   <meta name="twitter:card" content="app" />
   <title>Rainbowkit</title>
+  <link rel="stylesheet" href="./src/style.scss">
 </head>
 
 <body>
-  <header>
-    <nav>
+  <header class="header">
+    <nav class="navigation">
       <a class="menu__link" tabindex="3" href="#" aria-label="Ir al Home" aria-level="1">
         <i aria-hidden="true">
-          <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120" fill="none">
+          <svg class="navigation__item" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 120 120"
+            fill="none">
             <rect width="120" height="120" fill="url(#paint0_linear_62_329)" />
             <path
               d="M20 38H26C56.9279 38 82 63.0721 82 94V100H94C97.3137 100 100 97.3137 100 94C100 53.1309 66.8691 20 26 20C22.6863 20 20 22.6863 20 26V38Z"
@@ -94,8 +96,8 @@
           </svg>
         </i>
       </a>
-      <h3>RainbowKit</h3>
-      <span>2.2.2</span>
+      <h3 class="header__title">RainbowKit</h3>
+      <span class="header__badge">2.2.2</span>
     </nav>
     <button class="header__button">
       <span>Connect Wallet</span>
@@ -103,14 +105,14 @@
   </header>
 
   <main>
-    <section>
-      <div>
-        <h2>RainbowKit</h2>
-        <h1>The best way to connect a wallet</h1>
-        <h3>Designed for everyone. Built for developers.</h3>
-        <div>
-          <code>npm init @rainbow-me/rainbowkit@latest</code>
-          <button>
+    <section class="hero">
+      <div class="hero-container">
+        <h2 class="hero-container__title">RainbowKit</h2>
+        <h1 class="hero-container__second-title">The best way to connect a wallet</h1>
+        <p class="hero-container__text">Designed for everyone. Built for developers.</p>
+        <div class="code-container">
+          <code class="code-container__text">npm init @rainbow-me/rainbowkit@latest</code>
+          <button class="code-container__button">
             <svg fill="none" height="24" width="24" xmlns="http://www.w3.org/2000/svg">
               <title>Copy</title>
               <path
@@ -119,205 +121,387 @@
             </svg>
           </button>
         </div>
-        <a href="#">
+        <a class="hero-container__button" href="#">
           <span>View the Docs</span>
         </a>
       </div>
-      <div>
-        <div>
-          <picture>
-            <img src="./images/hero-modal.webp" alt="Rainbow kit application view on a computer full screen.">
-          </picture>
-          <picture>
-            <img src="./images/hero-compact.webp" alt="Rainbow kit application resposive view on a computer.">
-          </picture>
-          <picture>
-            <img src="./images/hero-iphone.webp" alt="Rainbow kit application view on mobile.">
-          </picture>
-        </div>
-        <div>
-          <p>The siqqest Web3 teams are using RainbowKit to improve their products, delight their users and save time
-            when building.</p>
-          <div class="bento" tabindex="3" aria-label="grid"
-            aria-description="Grid shows the teams that are using RainbowKit to improve their products.">
-            <a href="#" role="link">
-              <i aria-hidden="true"><img src="./images/teams/coinbase.webp" alt="Coinbase website logo image">
-              </i>
-              <h5>Coinbase</h5>
-            </a>
-            <a href="#" role="link">
-              <i aria-hidden="true">
-                <img src="./images/teams/optimism.webp" alt="optimism website logo image">
-              </i>
-              <h5>optimism</h5>
-            </a>
-            <a href="#" role="link">
-              <i aria-hidden="true">
-                <img src="./images/teams/arbitrum.webp" alt="Arbitrum website logo image">
-              </i>
-              <h5>Arbitrum</h5>
-            </a>
-            <a href="#" role="link">
-              <i aria-hidden="true">
-                <img src="./images/teams/warpcast.webp" alt="Warpcast website logo image">
-              </i>
-              <h5>Warpcast</h5>
-            </a>
-            <a href="#" role="link">
-              <i aria-hidden="true">
-                <img src="./images/teams/opensea-pro.webp" alt="Opensea Pro website logo image">
-              </i>
-              <h5>Opensea Pro</h5>
-            </a>
-            <a href="#" role="link">
-              <i aria-hidden="true">
-                <img src="./images/teams/ens.webp" alt="ENS website logo image">
-              </i>
-              <h5>ENS</h5>
-            </a>
-            <a href="#" role="link">
-              <i aria-hidden="true">
-                <img src="./images/teams/prop-house.webp" alt="Prop House website logo image">
-              </i>
-              <h5>Prop House</h5>
-            </a>
-            <a href="#" role="link">
-              <i aria-hidden="true">
-                <img src="./images/teams/matcha.webp" alt="Matcha website logo image">
-              </i>
-              <h5>Matcha</h5>
-            </a>
-            <a href="#" role="link">
-              <i aria-hidden="true">
-                <img src="./images/teams/kwenta.webp" alt="Kwenta website logo image">
-              </i>
-              <h5>Kwenta</h5>
-            </a>
-            <a href="#" role="link">
-              <i aria-hidden="true">
-                <img src="./images/teams/aura.webp" alt="Aura website logo image">
-              </i>
-              <h5>Aura</h5>
-            </a>
-            <a href="#" role="link">
-              <i aria-hidden="true">
-                <img src="./images/teams/lyra.webp" alt="Lyra website logo image">
-              </i>
-              <h5>Lyra</h5>
-            </a>
-            <a href="#" role="link">
-              <i aria-hidden="true">
-                <img src="./images/teams/looksrare.webp" alt="LooksRare website logo image">
-              </i>
-              <h5>LooksRare</h5>
-            </a>
-            <a href="#" role="link">
-              <i aria-hidden="true">
-                <img src="./images/teams/defillama.webp" alt="DefiLlama website logo image">
-              </i>
-              <h5>DefiLlama</h5>
-            </a>
-            <a href="#" role="link">
-              <i aria-hidden="true">
-                <img src="./images/teams/nftx-yield.webp" alt="NFTX Yield website logo image">
-              </i>
-              <h5>NFTX Yield</h5>
-            </a>
-            <a href="#" role="link">
-              <i aria-hidden="true">
-                <img src="./images/teams/pooltogether.webp" alt="PoolTogether website logo image">
-              </i>
-              <h5>PoolTogether</h5>
-            </a>
-            <a href="#" role="link">
-              <i aria-hidden="true">
-                <img src="./images/teams/art-blocks.webp" alt="Art Blocks website logo image">
-              </i>
-              <h5>Art Blocks</h5>
-            </a>
-            <a href="#" role="link">
-              <i aria-hidden="true">
-                <img src="./images/teams/cool-cats.webp" alt="Cool Cats website logo image">
-              </i>
-              <h5>Cool Cats</h5>
-            </a>
-            <a href="#" role="link">
-              <i aria-hidden="true">
-                <img src="./images/teams/party.webp" alt="Party website logo image">
-              </i>
-              <h5>Party</h5>
-            </a>
-            <a href="#" role="link">
-              <i aria-hidden="true">
-                <img src="./images/teams/superrare.webp" alt="SuperRare website logo image">
-              </i>
-              <h5>SuperRare</h5>
-            </a>
-            <a href="#" role="link">
-              <i aria-hidden="true">
-                <img src="./images/teams/trader-joe.webp" alt="Trader Joe website logo image">
-              </i>
-              <h5>Trader Joe</h5>
-            </a>
-            <a href="#" role="link">
-              <i aria-hidden="true">
-                <img src="./images/teams/doodles.webp" alt="Doodles Joe website logo image">
-              </i>
-              <h5>Doodles</h5>
-            </a>
-            <a href="#" role="link">
-              <i aria-hidden="true">
-                <img src="./images/teams/frax.webp" alt="Frax Joe website logo image">
-              </i>
-              <h5>Frax</h5>
-            </a>
-            <a href="#" role="link">
-              <i aria-hidden="true">
-                <img src="./images/teams/speedtracer.webp" alt="Speedtracer Joe website logo image">
-              </i>
-              <h5>Speedtracer</h5>
-            </a>
-            <a href="#" role="link">
-              <i aria-hidden="true">
-                <img src="./images/teams/gitcoin.webp" alt="Gitcoin Joe website logo image">
-              </i>
-              <h5>Gitcoin</h5>
-            </a>
-          </div>
+      <div class="picture-container">
+        <picture class="picture-container__first-img">
+          <img width="800px" src="./images/hero-modal.webp"
+            alt="Rainbow kit application view on a computer full screen.">
+        </picture>
+        <picture class="picture-container__second-img">
+          <img width="430px" src="./images/hero-compact.webp"
+            alt="Rainbow kit application resposive view on a computer.">
+        </picture>
+        <picture class="picture-container__third-img">
+          <img width="320px" src="./images/hero-iphone.webp" alt="Rainbow kit application view on mobile.">
+        </picture>
+      </div>
+      <div class="team-container">
+        <p class="team-container__text">The siqqest Web3 teams are using RainbowKit to improve their products, delight
+          their users and save time
+          when building.</p>
+        <div class="bento" tabindex="3" aria-label="grid"
+          aria-description="Grid shows the teams that are using RainbowKit to improve their products.">
+          <a class="bento__item" href="#" role="link">
+            <i aria-hidden="true"><img src="./images/teams/coinbase.webp" alt="Coinbase website logo image">
+            </i>
+            <h5>Coinbase</h5>
+          </a>
+          <a class="bento__item" href="#" role="link">
+            <i aria-hidden="true">
+              <img src="./images/teams/optimism.webp" alt="optimism website logo image">
+            </i>
+            <h5>optimism</h5>
+          </a>
+          <a class="bento__item" href="#" role="link">
+            <i aria-hidden="true">
+              <img src="./images/teams/arbitrum.webp" alt="Arbitrum website logo image">
+            </i>
+            <h5>Arbitrum</h5>
+          </a>
+          <a class="bento__item" href="#" role="link">
+            <i aria-hidden="true">
+              <img src="./images/teams/warpcast.webp" alt="Warpcast website logo image">
+            </i>
+            <h5>Warpcast</h5>
+          </a>
+          <a class="bento__item" href="#" role="link">
+            <i aria-hidden="true">
+              <img src="./images/teams/opensea-pro.webp" alt="Opensea Pro website logo image">
+            </i>
+            <h5>Opensea Pro</h5>
+          </a>
+          <a class="bento__item" href="#" role="link">
+            <i aria-hidden="true">
+              <img src="./images/teams/ens.webp" alt="ENS website logo image">
+            </i>
+            <h5>ENS</h5>
+          </a>
+          <a class="bento__item" href="#" role="link">
+            <i aria-hidden="true">
+              <img src="./images/teams/prop-house.webp" alt="Prop House website logo image">
+            </i>
+            <h5>Prop House</h5>
+          </a>
+          <a class="bento__item" href="#" role="link">
+            <i aria-hidden="true">
+              <img src="./images/teams/matcha.webp" alt="Matcha website logo image">
+            </i>
+            <h5>Matcha</h5>
+          </a>
+          <a class="bento__item" href="#" role="link">
+            <i aria-hidden="true">
+              <img src="./images/teams/kwenta.webp" alt="Kwenta website logo image">
+            </i>
+            <h5>Kwenta</h5>
+          </a>
+          <a class="bento__item" href="#" role="link">
+            <i aria-hidden="true">
+              <img src="./images/teams/aura.webp" alt="Aura website logo image">
+            </i>
+            <h5>Aura</h5>
+          </a>
+          <a class="bento__item" href="#" role="link">
+            <i aria-hidden="true">
+              <img src="./images/teams/lyra.webp" alt="Lyra website logo image">
+            </i>
+            <h5>Lyra</h5>
+          </a>
+          <a class="bento__item" href="#" role="link">
+            <i aria-hidden="true">
+              <img src="./images/teams/looksrare.webp" alt="LooksRare website logo image">
+            </i>
+            <h5>LooksRare</h5>
+          </a>
+          <a class="bento__item" href="#" role="link">
+            <i aria-hidden="true">
+              <img src="./images/teams/defillama.webp" alt="DefiLlama website logo image">
+            </i>
+            <h5>DefiLlama</h5>
+          </a>
+          <a class="bento__item" href="#" role="link">
+            <i aria-hidden="true">
+              <img src="./images/teams/nftx-yield.webp" alt="NFTX Yield website logo image">
+            </i>
+            <h5>NFTX Yield</h5>
+          </a>
+          <a class="bento__item" href="#" role="link">
+            <i aria-hidden="true">
+              <img src="./images/teams/pooltogether.webp" alt="PoolTogether website logo image">
+            </i>
+            <h5>PoolTogether</h5>
+          </a>
+          <a class="bento__item" href="#" role="link">
+            <i aria-hidden="true">
+              <img src="./images/teams/art-blocks.webp" alt="Art Blocks website logo image">
+            </i>
+            <h5>Art Blocks</h5>
+          </a>
+          <a class="bento__item" href="#" role="link">
+            <i aria-hidden="true">
+              <img src="./images/teams/cool-cats.webp" alt="Cool Cats website logo image">
+            </i>
+            <h5>Cool Cats</h5>
+          </a>
+          <a class="bento__item" href="#" role="link">
+            <i aria-hidden="true">
+              <img src="./images/teams/party.webp" alt="Party website logo image">
+            </i>
+            <h5>Party</h5>
+          </a>
+          <a class="bento__item" href="#" role="link">
+            <i aria-hidden="true">
+              <img src="./images/teams/superrare.webp" alt="SuperRare website logo image">
+            </i>
+            <h5>SuperRare</h5>
+          </a>
+          <a class="bento__item" href="#" role="link">
+            <i aria-hidden="true">
+              <img src="./images/teams/trader-joe.webp" alt="Trader Joe website logo image">
+            </i>
+            <h5>Trader Joe</h5>
+          </a>
+          <a class="bento__item" href="#" role="link">
+            <i aria-hidden="true">
+              <img src="./images/teams/doodles.webp" alt="Doodles Joe website logo image">
+            </i>
+            <h5>Doodles</h5>
+          </a>
+          <a class="bento__item" href="#" role="link">
+            <i aria-hidden="true">
+              <img src="./images/teams/frax.webp" alt="Frax Joe website logo image">
+            </i>
+            <h5>Frax</h5>
+          </a>
+          <a class="bento__item" href="#" role="link">
+            <i aria-hidden="true">
+              <img src="./images/teams/speedtracer.webp" alt="Speedtracer Joe website logo image">
+            </i>
+            <h5>Speedtracer</h5>
+          </a>
+          <a class="bento__item" href="#" role="link">
+            <i aria-hidden="true">
+              <img src="./images/teams/gitcoin.webp" alt="Gitcoin Joe website logo image">
+            </i>
+            <h5>Gitcoin</h5>
+          </a>
         </div>
       </div>
     </section>
 
-    <section>
-      <div>
-        <h1>Give RainbowKit a spin</h1>
-        <p>Make your Ethereum login experience feel right at home on your website. RainbowKit allows you to fully
+    <section class="kit-container">
+      <div class="information-container">
+        <h1 class="information-container__title">Give RainbowKit a spin</h1>
+        <p class="information-container__text">Make your Ethereum login experience feel right at home on your website.
+          RainbowKit allows you to fully
           customize color, border radius, wallet providers and a lot more — all through an easy-to-use API. Get a feel
           for it below!</p>
       </div>
-      <div>
-        <article>
-          <div>
-            <h4 tabindex="1">Connet Wallet</h4>
-            <menu tabindex="2">
+      <div class="modal">
+        <article class="modal-content">
+          <div class="modal-nav">
+            <h3 tabindex="1">Connect Wallet</h3>
+            <menu tabindex="2" class="menu">
               <li>
                 <h5>Popular</h5>
-                <div class="sub-menu">
-                  <menu>
-                    <li>
-                      <i>s</i>
+                <div>
+                  <menu class="sub-menu">
+                    <li class="sub-menu__item">
+                      <i aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 120 120"
+                          fill="none">
+                          <rect width="120" height="120" fill="url(#paint0_linear_62_329)" />
+                          <path
+                            d="M20 38H26C56.9279 38 82 63.0721 82 94V100H94C97.3137 100 100 97.3137 100 94C100 53.1309 66.8691 20 26 20C22.6863 20 20 22.6863 20 26V38Z"
+                            fill="url(#paint1_radial_62_329)" />
+                          <path d="M84 94H100C100 97.3137 97.3137 100 94 100H84V94Z"
+                            fill="url(#paint2_linear_62_329)" />
+                          <path d="M26 20L26 36H20L20 26C20 22.6863 22.6863 20 26 20Z"
+                            fill="url(#paint3_linear_62_329)" />
+                          <path d="M20 36H26C58.0325 36 84 61.9675 84 94V100H66V94C66 71.9086 48.0914 54 26 54H20V36Z"
+                            fill="url(#paint4_radial_62_329)" />
+                          <path d="M68 94H84V100H68V94Z" fill="url(#paint5_linear_62_329)" />
+                          <path d="M20 52L20 36L26 36L26 52H20Z" fill="url(#paint6_linear_62_329)" />
+                          <path
+                            d="M20 62C20 65.3137 22.6863 68 26 68C40.3594 68 52 79.6406 52 94C52 97.3137 54.6863 100 58 100H68V94C68 70.804 49.196 52 26 52H20V62Z"
+                            fill="url(#paint7_radial_62_329)" />
+                          <path d="M52 94H68V100H58C54.6863 100 52 97.3137 52 94Z" fill="url(#paint8_radial_62_329)" />
+                          <path d="M26 68C22.6863 68 20 65.3137 20 62L20 52L26 52L26 68Z"
+                            fill="url(#paint9_radial_62_329)" />
+                          <defs>
+                            <linearGradient id="paint0_linear_62_329" x1="60" y1="0" x2="60" y2="120"
+                              gradientUnits="userSpaceOnUse">
+                              <stop stop-color="#174299" />
+                              <stop offset="1" stop-color="#001E59" />
+                            </linearGradient>
+                            <radialGradient id="paint1_radial_62_329" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                              gradientTransform="translate(26 94) rotate(-90) scale(74)">
+                              <stop offset="0.770277" stop-color="#FF4000" />
+                              <stop offset="1" stop-color="#8754C9" />
+                            </radialGradient>
+                            <linearGradient id="paint2_linear_62_329" x1="83" y1="97" x2="100" y2="97"
+                              gradientUnits="userSpaceOnUse">
+                              <stop stop-color="#FF4000" />
+                              <stop offset="1" stop-color="#8754C9" />
+                            </linearGradient>
+                            <linearGradient id="paint3_linear_62_329" x1="23" y1="20" x2="23" y2="37"
+                              gradientUnits="userSpaceOnUse">
+                              <stop stop-color="#8754C9" />
+                              <stop offset="1" stop-color="#FF4000" />
+                            </linearGradient>
+                            <radialGradient id="paint4_radial_62_329" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                              gradientTransform="translate(26 94) rotate(-90) scale(58)">
+                              <stop offset="0.723929" stop-color="#FFF700" />
+                              <stop offset="1" stop-color="#FF9901" />
+                            </radialGradient>
+                            <linearGradient id="paint5_linear_62_329" x1="68" y1="97" x2="84" y2="97"
+                              gradientUnits="userSpaceOnUse">
+                              <stop stop-color="#FFF700" />
+                              <stop offset="1" stop-color="#FF9901" />
+                            </linearGradient>
+                            <linearGradient id="paint6_linear_62_329" x1="23" y1="52" x2="23" y2="36"
+                              gradientUnits="userSpaceOnUse">
+                              <stop stop-color="#FFF700" />
+                              <stop offset="1" stop-color="#FF9901" />
+                            </linearGradient>
+                            <radialGradient id="paint7_radial_62_329" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                              gradientTransform="translate(26 94) rotate(-90) scale(42)">
+                              <stop offset="0.59513" stop-color="#00AAFF" />
+                              <stop offset="1" stop-color="#01DA40" />
+                            </radialGradient>
+                            <radialGradient id="paint8_radial_62_329" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                              gradientTransform="translate(51 97) scale(17 45.3333)">
+                              <stop stop-color="#00AAFF" />
+                              <stop offset="1" stop-color="#01DA40" />
+                            </radialGradient>
+                            <radialGradient id="paint9_radial_62_329" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                              gradientTransform="translate(23 69) rotate(-90) scale(17 322.37)">
+                              <stop stop-color="#00AAFF" />
+                              <stop offset="1" stop-color="#01DA40" />
+                            </radialGradient>
+                          </defs>
+                        </svg>
+                      </i>
                       <h4>Rainbow</h4>
                     </li>
-                    <li>
-                      <i>s</i>
+                    <li class="sub-menu__item">
+                      <i aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                          <rect width="28" height="28" fill="#2C5FF6" />
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M14 23.8C19.4124 23.8 23.8 19.4124 23.8 14C23.8 8.58761 19.4124 4.2 14 4.2C8.58761 4.2 4.2 8.58761 4.2 14C4.2 19.4124 8.58761 23.8 14 23.8ZM11.55 10.8C11.1358 10.8 10.8 11.1358 10.8 11.55V16.45C10.8 16.8642 11.1358 17.2 11.55 17.2H16.45C16.8642 17.2 17.2 16.8642 17.2 16.45V11.55C17.2 11.1358 16.8642 10.8 16.45 10.8H11.55Z"
+                            fill="white" />
+                        </svg>
+                      </i>
                       <h4>Coinbase Wallet</h4>
                     </li>
-                    <li>
-                      <i>s</i>
+                    <li class="sub-menu__item">
+                      <i aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                          <rect width="28" height="28" fill="white" />
+                          <path d="M24.0891 3.1199L15.3446 9.61456L16.9617 5.7828L24.0891 3.1199Z" fill="#E2761B"
+                            stroke="#E2761B" stroke-width="0.0878845" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M3.90207 3.1199L12.5763 9.67608L11.0383 5.7828L3.90207 3.1199Z" fill="#E4761B"
+                            stroke="#E4761B" stroke-width="0.0878845" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M20.9429 18.1745L18.6139 21.7426L23.597 23.1136L25.0295 18.2536L20.9429 18.1745Z"
+                            fill="#E4761B" stroke="#E4761B" stroke-width="0.0878845" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                          <path d="M2.97929 18.2536L4.40301 23.1136L9.38607 21.7426L7.05713 18.1745L2.97929 18.2536Z"
+                            fill="#E4761B" stroke="#E4761B" stroke-width="0.0878845" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                          <path d="M9.10483 12.1456L7.71626 14.2461L12.6642 14.4658L12.4884 9.14877L9.10483 12.1456Z"
+                            fill="#E4761B" stroke="#E4761B" stroke-width="0.0878845" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                          <path d="M18.8864 12.1456L15.4589 9.08725L15.3446 14.4658L20.2837 14.2461L18.8864 12.1456Z"
+                            fill="#E4761B" stroke="#E4761B" stroke-width="0.0878845" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                          <path d="M9.38606 21.7426L12.3566 20.2925L9.79033 18.2888L9.38606 21.7426Z" fill="#E4761B"
+                            stroke="#E4761B" stroke-width="0.0878845" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M15.6347 20.2925L18.6139 21.7426L18.2009 18.2888L15.6347 20.2925Z" fill="#E4761B"
+                            stroke="#E4761B" stroke-width="0.0878845" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M18.6139 21.7426L15.6347 20.2925L15.8719 22.2348L15.8456 23.0521L18.6139 21.7426Z"
+                            fill="#D7C1B3" stroke="#D7C1B3" stroke-width="0.0878845" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                          <path d="M9.38606 21.7426L12.1544 23.0521L12.1368 22.2348L12.3566 20.2925L9.38606 21.7426Z"
+                            fill="#D7C1B3" stroke="#D7C1B3" stroke-width="0.0878845" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                          <path d="M12.1984 17.0056L9.72002 16.2762L11.4689 15.4765L12.1984 17.0056Z" fill="#233447"
+                            stroke="#233447" stroke-width="0.0878845" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M15.7928 17.0056L16.5223 15.4765L18.28 16.2762L15.7928 17.0056Z" fill="#233447"
+                            stroke="#233447" stroke-width="0.0878845" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M9.38606 21.7426L9.80791 18.1745L7.05712 18.2536L9.38606 21.7426Z" fill="#CD6116"
+                            stroke="#CD6116" stroke-width="0.0878845" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M18.1921 18.1745L18.6139 21.7426L20.9429 18.2536L18.1921 18.1745Z" fill="#CD6116"
+                            stroke="#CD6116" stroke-width="0.0878845" stroke-linecap="round" stroke-linejoin="round" />
+                          <path
+                            d="M20.2837 14.2461L15.3446 14.4658L15.8016 17.0057L16.5311 15.4765L18.2888 16.2762L20.2837 14.2461Z"
+                            fill="#CD6116" stroke="#CD6116" stroke-width="0.0878845" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                          <path
+                            d="M9.72002 16.2762L11.4777 15.4765L12.1984 17.0057L12.6642 14.4658L7.71626 14.2461L9.72002 16.2762Z"
+                            fill="#CD6116" stroke="#CD6116" stroke-width="0.0878845" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                          <path d="M7.71626 14.2461L9.79033 18.2888L9.72002 16.2762L7.71626 14.2461Z" fill="#E4751F"
+                            stroke="#E4751F" stroke-width="0.0878845" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M18.2888 16.2762L18.2009 18.2888L20.2837 14.2461L18.2888 16.2762Z" fill="#E4751F"
+                            stroke="#E4751F" stroke-width="0.0878845" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M12.6642 14.4658L12.1984 17.0057L12.7784 20.0025L12.9102 16.0565L12.6642 14.4658Z"
+                            fill="#E4751F" stroke="#E4751F" stroke-width="0.0878845" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                          <path d="M15.3446 14.4658L15.1073 16.0477L15.2128 20.0025L15.8016 17.0057L15.3446 14.4658Z"
+                            fill="#E4751F" stroke="#E4751F" stroke-width="0.0878845" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                          <path
+                            d="M15.8016 17.0056L15.2128 20.0025L15.6347 20.2925L18.2009 18.2888L18.2888 16.2762L15.8016 17.0056Z"
+                            fill="#F6851B" stroke="#F6851B" stroke-width="0.0878845" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                          <path
+                            d="M9.72002 16.2762L9.79033 18.2888L12.3566 20.2925L12.7784 20.0025L12.1984 17.0056L9.72002 16.2762Z"
+                            fill="#F6851B" stroke="#F6851B" stroke-width="0.0878845" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                          <path
+                            d="M15.8456 23.0521L15.8719 22.2348L15.6522 22.0414H12.339L12.1368 22.2348L12.1544 23.0521L9.38606 21.7426L10.3528 22.5336L12.3126 23.8958H15.6786L17.6472 22.5336L18.6139 21.7426L15.8456 23.0521Z"
+                            fill="#C0AD9E" stroke="#C0AD9E" stroke-width="0.0878845" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                          <path
+                            d="M15.6347 20.2925L15.2128 20.0025H12.7784L12.3566 20.2925L12.1368 22.2348L12.339 22.0414H15.6522L15.8719 22.2348L15.6347 20.2925Z"
+                            fill="#161616" stroke="#161616" stroke-width="0.0878845" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                          <path
+                            d="M24.4583 10.0364L25.2053 6.45072L24.0891 3.1199L15.6347 9.39485L18.8864 12.1456L23.4827 13.4903L24.5022 12.3038L24.0628 11.9874L24.7658 11.3459L24.221 10.924L24.924 10.3879L24.4583 10.0364Z"
+                            fill="#763D16" stroke="#763D16" stroke-width="0.0878845" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                          <path
+                            d="M2.79472 6.45072L3.54174 10.0364L3.06717 10.3879L3.77024 10.924L3.23415 11.3459L3.93722 11.9874L3.4978 12.3038L4.50847 13.4903L9.10483 12.1456L12.3566 9.39485L3.90207 3.1199L2.79472 6.45072Z"
+                            fill="#763D16" stroke="#763D16" stroke-width="0.0878845" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                          <path
+                            d="M23.4827 13.4903L18.8864 12.1456L20.2837 14.2461L18.2009 18.2888L20.9429 18.2536H25.0295L23.4827 13.4903Z"
+                            fill="#F6851B" stroke="#F6851B" stroke-width="0.0878845" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                          <path
+                            d="M9.10484 12.1456L4.50848 13.4903L2.97929 18.2536H7.05713L9.79033 18.2888L7.71626 14.2461L9.10484 12.1456Z"
+                            fill="#F6851B" stroke="#F6851B" stroke-width="0.0878845" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                          <path
+                            d="M15.3446 14.4658L15.6347 9.39485L16.9705 5.7828H11.0383L12.3566 9.39485L12.6642 14.4658L12.7696 16.0653L12.7784 20.0025H15.2128L15.2304 16.0653L15.3446 14.4658Z"
+                            fill="#F6851B" stroke="#F6851B" stroke-width="0.0878845" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        </svg>
+                      </i>
                       <h4>MetaMask</h4>
                     </li>
-                    <li>
-                      <i>s</i>
+                    <li class="sub-menu__item">
+                      <i aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                          <rect width="28" height="28" fill="#3B99FC" />
+                          <path
+                            d="M8.38969 10.3739C11.4882 7.27538 16.5118 7.27538 19.6103 10.3739L19.9832 10.7468C20.1382 10.9017 20.1382 11.1529 19.9832 11.3078L18.7076 12.5835C18.6301 12.6609 18.5045 12.6609 18.4271 12.5835L17.9139 12.0703C15.7523 9.9087 12.2477 9.9087 10.0861 12.0703L9.53655 12.6198C9.45909 12.6973 9.3335 12.6973 9.25604 12.6198L7.98039 11.3442C7.82547 11.1893 7.82547 10.9381 7.98039 10.7832L8.38969 10.3739ZM22.2485 13.012L23.3838 14.1474C23.5387 14.3023 23.5387 14.5535 23.3838 14.7084L18.2645 19.8277C18.1096 19.9827 17.8584 19.9827 17.7035 19.8277C17.7035 19.8277 17.7035 19.8277 17.7035 19.8277L14.0702 16.1944C14.0314 16.1557 13.9686 16.1557 13.9299 16.1944C13.9299 16.1944 13.9299 16.1944 13.9299 16.1944L10.2966 19.8277C10.1417 19.9827 9.89053 19.9827 9.73561 19.8278C9.7356 19.8278 9.7356 19.8277 9.7356 19.8277L4.61619 14.7083C4.46127 14.5534 4.46127 14.3022 4.61619 14.1473L5.75152 13.012C5.90645 12.857 6.15763 12.857 6.31255 13.012L9.94595 16.6454C9.98468 16.6841 10.0475 16.6841 10.0862 16.6454C10.0862 16.6454 10.0862 16.6454 10.0862 16.6454L13.7194 13.012C13.8743 12.857 14.1255 12.857 14.2805 13.012C14.2805 13.012 14.2805 13.012 14.2805 13.012L17.9139 16.6454C17.9526 16.6841 18.0154 16.6841 18.0541 16.6454L21.6874 13.012C21.8424 12.8571 22.0936 12.8571 22.2485 13.012Z"
+                            fill="white" />
+                        </svg>
+                      </i>
                       <h4>Wallet Connect</h4>
                     </li>
                   </menu>
@@ -325,26 +509,82 @@
               </li>
               <li>
                 <h5>More</h5>
-                <div class="sub-menu">
-                  <menu>
-                    <li>
-                      <i>s</i>
+                <div>
+                  <menu class="sub-menu">
+                    <li class="sub-menu__item">
+                      <i aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                          <rect width="28" height="28" fill="white" />
+                          <path
+                            d="M15.9033 7H11.8495C11.714 7 11.6055 7.10935 11.6026 7.24527C11.5207 11.0658 9.52894 14.6919 6.10076 17.2603C5.99192 17.3418 5.96712 17.495 6.04669 17.6053L8.41849 20.8966C8.49918 21.0086 8.6564 21.0338 8.76706 20.9515C10.9106 19.3561 12.6348 17.4314 13.8764 15.2981C15.118 17.4314 16.8423 19.3561 18.9858 20.9515C19.0964 21.0338 19.2536 21.0086 19.3344 20.8966L21.7062 17.6053C21.7857 17.495 21.7609 17.3418 21.6522 17.2603C18.2239 14.6919 16.2322 11.0658 16.1504 7.24527C16.1474 7.10935 16.0388 7 15.9033 7Z"
+                            fill="#FF875B" />
+                        </svg>
+                      </i>
                       <h4>Argent</h4>
                     </li>
-                    <li>
-                      <i>s</i>
+                    <li class="sub-menu__item">
+                      <i aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="28" height="28" viewBox="0 0 28 28">
+                          <path fill="#fff" d="M0 0h28v28H0z" />
+                          <path fill="#0500FF" d="M6 7.583 13.53 5v17.882C8.15 20.498 6 15.928 6 13.345V7.583Z" />
+                          <path fill="url(#a)" d="M22 7.583 13.53 5v17.882c6.05-2.384 8.47-6.954 8.47-9.537V7.583Z" />
+                          <defs>
+                            <linearGradient id="a" x1="19.768" x2="14.072" y1="3.753" y2="22.853"
+                              gradientUnits="userSpaceOnUse">
+                              <stop offset=".02" stop-color="#00F" />
+                              <stop offset=".08" stop-color="#0094FF" />
+                              <stop offset=".16" stop-color="#48FF91" />
+                              <stop offset=".42" stop-color="#0094FF" />
+                              <stop offset=".68" stop-color="#0038FF" />
+                              <stop offset=".9" stop-color="#0500FF" />
+                            </linearGradient>
+                          </defs>
+                        </svg>
+                      </i>
                       <h4>Trust Wallet</h4>
                     </li>
-                    <li>
-                      <i>s</i>
+                    <li class="sub-menu__item">
+                      <i aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 512 512"
+                          fill="none">
+                          <rect width="512" height="512" fill="black" />
+                          <path
+                            d="M67.8275 284.642C65.2758 277.745 64 270.6 64 263.193C64 254.255 65.2758 246.09 68.0826 238.428C90.5516 177.407 170.979 158 268.766 158C366.552 158 428.338 185.062 444.173 227.959C446.724 234.855 448 242 448 249.407C448 258.345 446.724 266.51 443.917 274.173C421.448 335.193 341.021 354.6 243.235 354.6C145.448 354.6 83.6622 327.531 67.8275 284.642ZM193.696 273.152C198.8 286.938 220.503 298.428 250.889 298.428C284.338 298.428 310.124 288.469 318.041 267.276C320.593 260.889 320.848 257.062 320.848 252.724C320.848 248.897 320.848 245.572 318.296 239.448C313.193 225.662 291.49 214.173 261.103 214.173C227.655 214.173 201.869 224.131 193.951 245.324C191.4 251.711 191.145 255.538 191.145 259.876C191.145 263.704 191.145 267.028 193.696 273.152Z"
+                            fill="white" />
+                          <path
+                            d="M229.477 263.47C231.65 269.339 240.887 274.231 253.827 274.231C268.066 274.231 279.045 269.995 282.413 260.969C283.499 258.25 283.609 256.624 283.609 254.773C283.609 253.139 283.609 251.732 282.522 249.122C280.35 243.254 271.113 238.362 258.173 238.362C243.934 238.362 232.955 242.598 229.587 251.623C228.501 254.342 228.391 255.968 228.391 257.82C228.391 259.453 228.391 260.86 229.477 263.47Z"
+                            fill="white" />
+                        </svg>
+                      </i>
                       <h4>Omni</h4>
                     </li>
-                    <li>
-                      <i>s</i>
+                    <li class="sub-menu__item">
+                      <i aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" fill="none"
+                          viewBox="0 0 28 28">
+                          <path fill="url(#a)" d="M0 0h28v28H0z" />
+                          <path fill="#fff"
+                            d="M14.193 20.693c-4.435.374-8.547-2.224-8.87-6.26-.298-3.326 1.825-4.758 3.504-4.885a2.908 2.908 0 0 1 3.282 2.376c.12 1.325-.742 1.952-1.343 1.996a1.007 1.007 0 0 1-1.128-.83c-.044-.513.165-.583.101-1.121a1.172 1.172 0 0 0-1.432-1.033c-.57.044-1.622.703-1.489 2.332.134 1.628 1.774 2.94 3.903 2.743a4.346 4.346 0 0 0 4.03-4.372c0-.128.03-.254.088-.367.027-.044.057-.087.09-.127.056-.089.122-.172.196-.247l.209-.21c1-.911 4.637-3.104 8.052-2.42a.14.14 0 0 1 .076 0c.133 0 .21.09.222.222.539 7.996-4.745 11.785-9.49 12.203Z" />
+                          <defs>
+                            <linearGradient id="a" x1="27.236" x2=".05" y1=".889" y2="27.978"
+                              gradientUnits="userSpaceOnUse">
+                              <stop stop-color="#11C4D1" />
+                              <stop offset="1" stop-color="#0062AD" />
+                            </linearGradient>
+                          </defs>
+                        </svg>
+                      </i>
                       <h4>imToken</h4>
                     </li>
-                    <li>
-                      <i>s</i>
+                    <li class="sub-menu__item">
+                      <i aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none">
+                          <path fill="#000" d="M0 0h28v28H0z" />
+                          <path fill="#fff" fill-rule="evenodd"
+                            d="M11.65 4.4H4.4V9h1.1V5.5l6.15-.04V4.4Zm.05 5.95v7.25h4.6v-1.1h-3.5l-.04-6.15H11.7ZM4.4 23.6h7.25v-1.06L5.5 22.5V19H4.4v4.6ZM16.35 4.4h7.25V9h-1.1V5.5l-6.15-.04V4.4Zm7.25 19.2h-7.25v-1.06l6.15-.04V19h1.1v4.6Z"
+                            clip-rule="evenodd" />
+                        </svg>
+                      </i>
                       <h4>Leader</h4>
                     </li>
                   </menu>
@@ -352,9 +592,9 @@
               </li>
             </menu>
           </div>
-          <div tabindex="3">
+          <div tabindex="3" class="modal-information">
             <header>
-              <button aria-label="Close">
+              <button aria-label="Close" class="modal-information__button">
                 <svg aria-hidden="true" fill="none" height="10" viewBox="0 0 10 10" width="10"
                   xmlns="http://www.w3.org/2000/svg">
                   <title>Close</title>
@@ -366,9 +606,9 @@
             </header>
             <main>
               <h4>What is a Wallet?</h4>
-              <div>
-                <article>
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 48 48">
+              <div class="banner-container">
+                <article class="banner-container__banner">
+                  <svg width="120px" height="120px" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 48 48">
                     <path fill="url(#a)"
                       d="M1.09 5.46C0 7.6 0 10.4 0 16v16c0 5.6 0 8.4 1.09 10.54a10 10 0 0 0 4.37 4.37C7.6 48 10.4 48 16 48h16c1.752 0 3.23 0 4.5-.033 0-1.362 0-2.044.066-2.616a10 10 0 0 1 8.785-8.785c.572-.066 1.254-.066 2.616-.066C48 35.23 48 33.752 48 32V16c0-5.6 0-8.4-1.09-10.54a10 10 0 0 0-4.37-4.37C40.4 0 37.6 0 32 0H16C10.4 0 7.6 0 5.46 1.09a10 10 0 0 0-4.37 4.37Z" />
                     <path fill="url(#b)"
@@ -559,8 +799,8 @@
                     <p>Wallets are used to send, receive, store, and display digital assets like Ethereum and NFTs.</p>
                   </div>
                 </article>
-                <article>
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 48 48">
+                <article class="banner-container__banner">
+                  <svg width="120px" height="120px" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 48 48">
                     <path fill="url(#a)"
                       d="M0 16c0-5.6 0-8.4 1.09-10.54a10 10 0 0 1 4.37-4.37C7.6 0 10.4 0 16 0h16c5.6 0 8.4 0 10.54 1.09a10 10 0 0 1 4.37 4.37C48 7.6 48 10.4 48 16v16c0 5.6 0 8.4-1.09 10.54a10.001 10.001 0 0 1-4.37 4.37C40.4 48 37.6 48 32 48H16c-5.6 0-8.4 0-10.54-1.09a10 10 0 0 1-4.37-4.37C0 40.4 0 37.6 0 32V16Z" />
                     <path fill="url(#b)"
