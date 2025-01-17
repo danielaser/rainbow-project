@@ -46,6 +46,12 @@
     background: #3898ff;
     font-size: 15px;
     font-weight: 600;
+    cursor: pointer;
+    transition: 0.5s transform;
+
+    &:hover {
+        transform: scale(1.05);
+    }
 
 }
 
@@ -91,6 +97,12 @@
         font-weight: 800;
         text-decoration: none;
         margin-top: 20px;
+        cursor: pointer;
+        transition: 0.5s transform;
+
+        &:hover {
+            transform: scale(1.05);
+        }
     }
 
 
@@ -116,6 +128,7 @@
         background-color: transparent;
         color: #ffffff59;
         border: none;
+        cursor: pointer;
     }
 }
 
@@ -212,7 +225,105 @@
 
 .kit-container {
     padding: 150px;
-    background-color: #0052bd;
+    --c-0: hsla(230.02939560834102, 62%, 46%, 1);
+    --x-0: 63%;
+    --y-0: 44%;
+    --c-1: hsla(333, 53%, 100%, 1);
+    --x-1: 112%;
+    --y-1: 108%;
+    ;
+    background-color: hsla(259.14704266716444, 85%, 53%, 1);
+    background-image: radial-gradient(circle at var(--x-0) var(--y-0), var(--c-0) var(--s-start-0), transparent var(--s-end-0)), radial-gradient(circle at var(--x-1) var(--y-1), var(--c-1) var(--s-start-1), transparent var(--s-end-1));
+    animation: hero-gradient-animation 10s linear infinite alternate;
+    background-blend-mode: normal, normal;
+}
+
+@keyframes hero-gradient-animation {
+    0% {
+        --c-0: hsla(230.02939560834102, 62%, 46%, 1);
+        --x-0: 63%;
+        --y-0: 44%;
+        --s-start-0: 10%;
+        --s-end-0: 51%;
+        --c-1: hsla(333, 53%, 100%, 1);
+        --x-1: 112%;
+        --y-1: 108%;
+        --s-start-1: 4.721435316336166%;
+        --s-end-1: 17.44337251571353%;
+    }
+
+    100% {
+        --c-0: hsla(245.91174854951743, 48%, 52%, 1);
+        --x-0: 82%;
+        --y-0: 72%;
+        --s-start-0: 10%;
+        --s-end-0: 51%;
+        --c-1: hsla(212.3684210526316, 72%, 58%, 1);
+        --x-1: 67%;
+        --y-1: 52%;
+        --s-start-1: 10%;
+        --s-end-1: 51%;
+    }
+}
+
+@property --c-0 {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: hsla(230.02939560834102, 62%, 46%, 1)
+}
+
+@property --x-0 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 63%
+}
+
+@property --y-0 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 44%
+}
+
+@property --s-start-0 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 10%
+}
+
+@property --s-end-0 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 51%
+}
+
+@property --c-1 {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: hsla(333, 53%, 100%, 1)
+}
+
+@property --x-1 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 112%
+}
+
+@property --y-1 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 108%
+}
+
+@property --s-start-1 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 4.721435316336166%
+}
+
+@property --s-end-1 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 17.44337251571353%
 }
 
 .information-container {
@@ -305,6 +416,12 @@
         border-radius: 50%;
         border: none;
         color: #242529;
+        cursor: pointer;
+        transition: 0.5s transform;
+
+        &:hover {
+            transform: scale(1.05);
+        }
     }
 
     main {
@@ -368,7 +485,7 @@
     &__text {
         font-size: 22px;
         font-weight: 800;
-        color: #8ecaf9;
+        color: #4082ff;
     }
 
     &__button {
@@ -379,6 +496,18 @@
         box-shadow: inset 0 0 0 1px hsla(0, 0%, 100%, .12);
         background: #ffffff52;
         margin-right: 10px;
+        cursor: pointer;
+        transition: 0.5s transform;
+
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+
+    &__button-text {
+        color: #fff;
+        font-size: 15px;
+        font-weight: 700;
     }
 
     #blue {
@@ -405,6 +534,17 @@
         background-color: #1db847;
     }
 
+    #white {
+        background-color: #fff;
+    }
+
+    #gray {
+        background-color: #1a1b1f;
+    }
+
+    #black {
+        background-color: #000;
+    }
 }
 
 .workers-container {
@@ -420,6 +560,12 @@
         border: none;
         font-size: 15px;
         font-weight: 600;
+        cursor: pointer;
+        transition: 0.5s transform;
+
+        &:hover {
+            transform: scale(1.05);
+        }
     }
 }
 
@@ -508,6 +654,12 @@
     border: none;
     background-image: linear-gradient(270deg, #1da1f2, #1d7df2);
     margin-right: 20px;
+    cursor: pointer;
+    transition: 0.5s transform;
+
+    &:hover {
+        transform: scale(1.05);
+    }
 }
 
 .share-button {
@@ -518,23 +670,36 @@
     color: #fff;
     border: none;
     background-image: linear-gradient(270deg, #ff6257, #ff5ca0);
+    cursor: pointer;
+    transition: 0.5s transform;
+
+    &:hover {
+        transform: scale(1.05);
+    }
 }
 
 .footer-links {
     text-align: center;
     padding-bottom: 120px;
     list-style: none;
+    line-height: 2;
 
     a {
         text-decoration: none;
         font-size: 22px;
         font-weight: 700;
         color: #1b1d1fb3;
+        cursor: pointer;
+    }
+
+    :hover {
+        color: #5f5afa;
     }
 
     &__text {
         font-size: 22px;
         font-weight: 700;
         color: #1b1d1f80;
+        pointer-events: none;
     }
 }
