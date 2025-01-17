@@ -1,9 +1,8 @@
 @use './reset';
+@use './variables' as variables;
 
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @include variables.container(space-between);
     padding: 25px;
     width: 1490px;
     position: absolute;
@@ -12,27 +11,22 @@
     translate: -50%;
 
     &__title {
-        color: #fff;
-        font-size: 20px;
+        @include variables.text(20px);
     }
 
     &__badge {
+        @include variables.font(12px, 600);
         background-color: #242529;
         color: #ffffff7a;
-        font-weight: 600;
         height: 22px;
         line-height: 1;
         padding: 7px;
         border-radius: 15px;
-        font-size: 12px;
     }
 }
 
 .navigation {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-
+    @include variables.container-gap(15px);
 }
 
 .navigation__item {
@@ -40,12 +34,9 @@
 }
 
 .header__button {
-    padding: 10px 14px 10px 14px;
-    border-radius: 10px;
-    color: #fff;
+    @include variables.button(10px, 10px 14px 10px 14px);
+    @include variables.font(15px, 600);
     background: #3898ff;
-    font-size: 15px;
-    font-weight: 600;
     cursor: pointer;
     transition: 0.5s transform;
 
@@ -64,37 +55,29 @@
 }
 
 .hero-container {
-    display: grid;
+    @include variables.container-grid(normal, 10px);
     justify-items: center;
-    gap: 10px;
     line-height: 1;
 
     &__title {
-        color: #677aff;
-        font-size: 40px;
+        @include variables.text(40px, #677aff);
         font-weight: 800;
     }
 
     &__second-title {
-        color: #fff;
-        font-size: 50px;
+        @include variables.text(50px);
         font-weight: 800;
         letter-spacing: -0.65px;
     }
 
     &__text {
-        color: #fff;
-        font-size: 30px;
-
+        @include variables.text(30px);
     }
 
     &__button {
-        padding: 15px 25px 15px 25px;
-        border-radius: 30px;
-        color: #ffffffd9;
+        @include variables.button(30px, 15px 25px 15px 25px, #ffffffd9);
+        @include variables.font(15px, 800);
         background-image: linear-gradient(to right, #3898ff, #7a70ff);
-        font-size: 15px;
-        font-weight: 800;
         text-decoration: none;
         margin-top: 20px;
         cursor: pointer;
@@ -105,23 +88,19 @@
         }
     }
 
-
 }
 
 .code-container {
-    justify-content: space-evenly;
+    @include variables.container(space-evenly);
     height: 44px;
     line-height: 1;
     background: #242529;
     width: 35%;
-    display: inline-flex;
-    align-items: center;
     border-radius: 30px;
     margin-top: 30px;
 
     &__text {
-        color: #fff;
-        font-size: 15px;
+        @include variables.text(15px);
     }
 
     &__button {
@@ -160,19 +139,17 @@
     justify-items: center;
 
     &__text {
-        color: #fff;
-        font-size: 24px;
+        @include variables.text(24px);
         width: 60%;
         text-align: center;
     }
 }
 
 .bento {
+    @include variables.container-grid(start, 30px);
     margin: 40px auto;
     max-width: 940px;
-    display: grid;
     grid-template-columns: repeat(6, 1fr);
-    gap: 30px;
 
     &__item {
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -334,15 +311,13 @@
     margin-bottom: 70px;
 
     &__title {
-        color: #fff;
-        font-size: 50px;
+        @include variables.text(50px);
         font-weight: 800;
         margin-bottom: 40px;
     }
 
     &__text {
-        color: #fff;
-        font-size: 25px;
+        @include variables.text(25px);
         font-weight: 700;
         letter-spacing: -0.65px;
     }
@@ -353,13 +328,13 @@
 }
 
 .modal-content {
+    display: flex;
     padding: 20px 20px 0 20px;
     width: 712px;
     height: 470px;
-    background-color: #fff;
+    background-color: variables.$white;
     border-radius: 15px;
     box-shadow: 0 4px 14px 5px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    display: flex;
 }
 
 .modal-nav {
@@ -367,8 +342,7 @@
     overflow-y: scroll;
 
     h3 {
-        font-size: 20px;
-        font-weight: 800;
+        @include variables.font(20px, 800);
     }
 }
 
@@ -397,9 +371,7 @@
     list-style: none;
 
     &__item {
-        align-items: center;
-        display: flex;
-        gap: 10px;
+        @include variables.container-gap(10px);
         margin-top: 10px;
     }
 }
@@ -412,10 +384,8 @@
     }
 
     &__button {
-        padding: 8px 10px 5px 10px;
-        border-radius: 50%;
+        @include variables.button(50%, 8px 10px 5px 10px, #242529);
         border: none;
-        color: #242529;
         cursor: pointer;
         transition: 0.5s transform;
 
@@ -434,10 +404,8 @@
         margin-top: 25px;
 
         &__banner {
-            display: flex;
+            @include variables.container-gap(10px);
             width: 70%;
-            gap: 10px;
-            align-items: center;
 
             h5 {
                 font-size: 15px;
@@ -451,17 +419,13 @@
     }
 
     footer {
-        display: grid;
-        justify-content: space-evenly;
-        gap: 10px;
+        @include variables.container-grid(space-evenly, 10px);
         margin-top: 20px;
 
         button {
+            @include variables.button(30px, 8px 20px 8px 20px);
             background-color: #0e76fd;
-            padding: 8px 20px 8px 20px;
-            border-radius: 30px;
             border: none;
-            color: #fff;
             font-weight: 600;
         }
 
@@ -483,9 +447,8 @@
     }
 
     &__text {
-        font-size: 22px;
+        @include variables.text(22px, #4082ff);
         font-weight: 800;
-        color: #4082ff;
     }
 
     &__button {
@@ -505,45 +468,44 @@
     }
 
     &__button-text {
-        color: #fff;
-        font-size: 15px;
+        @include variables.text(15px);
         font-weight: 700;
     }
 
     #blue {
-        background-color: #0e76fd;
+        background-color: variables.$blue;
     }
 
     #dark-blue {
-        background-color: #5f5af9;
+        background-color: variables.$dark-blue;
     }
 
     #pink {
-        background-color: #ff5ca0;
+        background-color: variables.$pink;
     }
 
     #red {
-        background-color: #fa423c;
+        background-color: variables.$red;
     }
 
     #orange {
-        background-color: #ff801f;
+        background-color: variables.$orange;
     }
 
     #green {
-        background-color: #1db847;
+        background-color: variables.$green;
     }
 
     #white {
-        background-color: #fff;
+        background-color: variables.$white;
     }
 
     #gray {
-        background-color: #1a1b1f;
+        background-color: variables.$dark-gray;
     }
 
     #black {
-        background-color: #000;
+        background-color: variables.$black;
     }
 }
 
@@ -553,13 +515,10 @@
     padding-bottom: 120px;
 
     button {
-        padding: 15px 25px 15px 25px;
+        @include variables.button(30px, 15px 25px 15px 25px);
+        @include variables.font(15px, 600);
         background-color: #3b84e4;
-        color: #fff;
-        border-radius: 30px;
         border: none;
-        font-size: 15px;
-        font-weight: 600;
         cursor: pointer;
         transition: 0.5s transform;
 
@@ -577,15 +536,13 @@
     justify-items: center;
 
     &__title {
-        color: #fff;
-        font-size: 50px;
+        @include variables.text(50px);
         font-weight: 800;
         margin-bottom: 40px;
     }
 
     &__text {
-        color: #fff;
-        font-size: 25px;
+        @include variables.text(25px);
         font-weight: 700;
         letter-spacing: -0.65px;
         width: 58%;
@@ -599,7 +556,7 @@
 
 .list {
     padding-inline: 50px;
-    color: #fff;
+    color: variables.$white;
     list-style: none;
 
     li {
@@ -630,15 +587,13 @@
     }
 
     &__title {
-        color: #000;
-        font-size: 55px;
+        @include variables.text(55px, variables.$black);
         font-weight: 800;
         margin-bottom: 40px;
     }
 
     &__text {
-        color: #000;
-        font-size: 25px;
+        @include variables.text(25px, variables.$black);
         font-weight: 700;
         letter-spacing: -0.65px;
         width: 58%;
@@ -646,11 +601,8 @@
 }
 
 .follow-button {
-    padding: 12px 25px 12px 25px;
-    border-radius: 30px;
-    font-size: 15px;
-    font-weight: 600;
-    color: #fff;
+    @include variables.button(30px, 12px 25px 12px 25px);
+    @include variables.font(15px, 600);
     border: none;
     background-image: linear-gradient(270deg, #1da1f2, #1d7df2);
     margin-right: 20px;
@@ -663,11 +615,8 @@
 }
 
 .share-button {
-    padding: 12px 25px 12px 25px;
-    border-radius: 30px;
-    font-size: 15px;
-    font-weight: 600;
-    color: #fff;
+    @include variables.button(30px, 12px 25px 12px 25px);
+    @include variables.font(15px, 600);
     border: none;
     background-image: linear-gradient(270deg, #ff6257, #ff5ca0);
     cursor: pointer;
@@ -686,8 +635,7 @@
 
     a {
         text-decoration: none;
-        font-size: 22px;
-        font-weight: 700;
+        @include variables.font(22px, 700);
         color: #1b1d1fb3;
         cursor: pointer;
     }
@@ -697,9 +645,8 @@
     }
 
     &__text {
-        font-size: 22px;
+        @include variables.text(22px, #1b1d1f80);
         font-weight: 700;
-        color: #1b1d1f80;
         pointer-events: none;
     }
 }
