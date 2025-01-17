@@ -1,24 +1,76 @@
-import './style.css'
-import typescriptLogo from './typescript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.ts'
+document.addEventListener('DOMContentLoaded', () => {
+  const kitContainer = document.querySelector('.kit-container') as HTMLElement;
+  const panelContent = document.querySelector('.panel-content') as HTMLElement;
+  const textElements = document.querySelectorAll<HTMLElement>('.panel-content *');
 
-document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://www.typescriptlang.org/" target="_blank">
-      <img src="${typescriptLogo}" class="logo vanilla" alt="TypeScript logo" />
-    </a>
-    <h1>Vite + TypeScript</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite and TypeScript logos to learn more
-    </p>
-  </div>
-`
+  const accentButtons = document.querySelectorAll<HTMLButtonElement>('[id="blue"], [id="dark-blue"], [id="pink"], [id="red"], [id="orange"], [id="green"]');
 
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+  accentButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const color = getComputedStyle(button).backgroundColor;
+      kitContainer.style.backgroundColor = color;
+
+      accentButtons.forEach((btn) => btn.setAttribute('aria-selected', 'false'));
+      button.setAttribute('aria-selected', 'true');
+    });
+  });
+
+  const modeButtons = document.querySelectorAll<HTMLButtonElement>('[id="white"], [id="gray"], [id="black"]');
+
+  modeButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const color = getComputedStyle(button).backgroundColor;
+      panelContent.style.backgroundColor = color;
+
+      textElements.forEach((textElement) => {
+        if (color === 'rgb(255, 255, 255)') {
+          textElement.style.color = 'black';
+        } else if (color === 'rgb(128, 128, 128)' || color === 'rgb(0, 0, 0)') {
+          textElement.style.color = 'white';
+        }
+      });
+
+      modeButtons.forEach((btn) => btn.setAttribute('aria-selected', 'false'));
+      button.setAttribute('aria-selected', 'true');
+    });
+  });
+
+  const radiusButtons = document.querySelectorAll<HTMLButtonElement>('[id="size-l"], [id="size-m"], [id="size-s"], [id="size-non"]');
+
+  radiusButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      let radiusValue: string;
+
+      switch (button.id) {
+        case 'size-l':
+          radiusValue = '15px';
+          break;
+        case 'size-m':
+          radiusValue = '10px';
+          break;
+        case 'size-s':
+          radiusValue = '5px';
+          break;
+        case 'size-non':
+          radiusValue = '0px';
+          break;
+        default:
+          radiusValue = '15px';
+      }
+
+      panelContent.style.borderRadius = radiusValue;
+
+      radiusButtons.forEach((btn) => btn.setAttribute('aria-selected', 'false'));
+      button.setAttribute('aria-selected', 'true');
+    });
+  });
+
+  const defaultAccentButton = document.querySelector<HTMLButtonElement>('#blue')!;
+  defaultAccentButton.click();
+
+  const defaultModeButton = document.querySelector<HTMLButtonElement>('#white')!;
+  defaultModeButton.click();
+
+  const defaultRadiusButton = document.querySelector<HTMLButtonElement>('#size-l')!;
+  defaultRadiusButton.click();
+});

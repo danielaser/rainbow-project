@@ -1,0 +1,45 @@
+$white: #fff;
+$black: #000;
+$light-blue: #3c99fa;
+$blue: #0e76fd;
+$dark-blue: #5f5af9;
+$pink: #ff5ca0;
+$red: #fa423c;
+$orange: #ff801f;
+$green: #1db847;
+$gray: #7a7272;
+$dark-gray: #1a1b1f;
+$smoky-gray: #242529;
+
+@mixin container($justify: start) {
+    display: flex;
+    align-items: center;
+    justify-content: $justify;
+}
+
+@mixin container-gap($gap: 0) {
+    @include container;
+    gap: $gap;
+}
+
+@mixin container-grid($justify: start, $gap: 0) {
+    display: grid;
+    justify-content: $justify;
+    gap: $gap;
+}
+
+@mixin button($border-radius: 0, $padding: 0 0 0 0, $color: $white) {
+    border-radius: $border-radius;
+    padding: $padding;
+    color: $color;
+}
+
+@mixin text($font-size: 0, $color: $white) {
+    font-size: $font-size;
+    color: $color;
+}
+
+@mixin font($font-size: 0, $font-weight: normal) {
+    font-size: $font-size;
+    font-weight: $font-weight;
+}
