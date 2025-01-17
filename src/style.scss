@@ -16,34 +16,33 @@
 
     &__badge {
         @include variables.font(12px, 600);
-        background-color: #242529;
+        background-color: variables.$smoky-gray;
         color: #ffffff7a;
         height: 22px;
         line-height: 1;
         padding: 7px;
         border-radius: 15px;
     }
+
+    &__button {
+        @include variables.button(10px, 10px 14px 10px 14px);
+        @include variables.font(15px, 600);
+        background: #3898ff;
+        cursor: pointer;
+        transition: 0.5s transform;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
 }
 
 .navigation {
     @include variables.container-gap(15px);
-}
 
-.navigation__item {
-    border-radius: 30%;
-}
-
-.header__button {
-    @include variables.button(10px, 10px 14px 10px 14px);
-    @include variables.font(15px, 600);
-    background: #3898ff;
-    cursor: pointer;
-    transition: 0.5s transform;
-
-    &:hover {
-        transform: scale(1.05);
+    &__item {
+        border-radius: 30%;
     }
-
 }
 
 .hero {
@@ -87,14 +86,13 @@
             transform: scale(1.05);
         }
     }
-
 }
 
 .code-container {
     @include variables.container(space-evenly);
     height: 44px;
     line-height: 1;
-    background: #242529;
+    background: variables.$smoky-gray;
     width: 35%;
     border-radius: 30px;
     margin-top: 30px;
@@ -323,11 +321,11 @@
     }
 }
 
-.modal {
+.panel {
     justify-items: center;
 }
 
-.modal-content {
+.panel-content {
     display: flex;
     padding: 20px 20px 0 20px;
     width: 712px;
@@ -337,7 +335,7 @@
     box-shadow: 0 4px 14px 5px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.modal-nav {
+.panel-nav {
     min-width: 245px;
     overflow-y: scroll;
 
@@ -352,7 +350,7 @@
 
     h5 {
         margin-top: 20px;
-        color: #7a7272;
+        color: variables.$gray;
         font-size: 14px;
     }
 
@@ -376,7 +374,7 @@
     }
 }
 
-.modal-information {
+.panel-information {
     padding-left: 20px;
 
     header {
@@ -384,7 +382,7 @@
     }
 
     &__button {
-        @include variables.button(50%, 8px 10px 5px 10px, #242529);
+        @include variables.button(50%, 8px 10px 5px 10px, variables.$smoky-gray);
         border: none;
         cursor: pointer;
         transition: 0.5s transform;
@@ -412,7 +410,7 @@
             }
 
             p {
-                color: #7a7272;
+                color: variables.$gray;
                 font-size: 14px;
             }
         }
@@ -424,15 +422,15 @@
 
         button {
             @include variables.button(30px, 8px 20px 8px 20px);
-            background-color: #0e76fd;
+            background-color: variables.$blue;
             border: none;
             font-weight: 600;
         }
 
         span {
             text-align: center;
-            color: #3c99fa;
-            font-weight: 600;
+            color: variables.$light-blue;
+            font-weight: 700;
         }
     }
 }
@@ -618,7 +616,7 @@
     @include variables.button(30px, 12px 25px 12px 25px);
     @include variables.font(15px, 600);
     border: none;
-    background-image: linear-gradient(270deg, #ff6257, #ff5ca0);
+    background-image: linear-gradient(270deg, #ff6257, variables.$pink);
     cursor: pointer;
     transition: 0.5s transform;
 
@@ -641,7 +639,7 @@
     }
 
     :hover {
-        color: #5f5afa;
+        color: variables.$dark-blue;
     }
 
     &__text {
