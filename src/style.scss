@@ -200,105 +200,7 @@
 
 .kit-container {
     padding: 150px;
-    --c-0: hsla(230.02939560834102, 62%, 46%, 1);
-    --x-0: 63%;
-    --y-0: 44%;
-    --c-1: hsla(333, 53%, 100%, 1);
-    --x-1: 112%;
-    --y-1: 108%;
-    ;
-    background-color: hsla(259.14704266716444, 85%, 53%, 1);
-    background-image: radial-gradient(circle at var(--x-0) var(--y-0), var(--c-0) var(--s-start-0), transparent var(--s-end-0)), radial-gradient(circle at var(--x-1) var(--y-1), var(--c-1) var(--s-start-1), transparent var(--s-end-1));
-    animation: hero-gradient-animation 10s linear infinite alternate;
-    background-blend-mode: normal, normal;
-}
-
-@keyframes hero-gradient-animation {
-    0% {
-        --c-0: hsla(230.02939560834102, 62%, 46%, 1);
-        --x-0: 63%;
-        --y-0: 44%;
-        --s-start-0: 10%;
-        --s-end-0: 51%;
-        --c-1: hsla(333, 53%, 100%, 1);
-        --x-1: 112%;
-        --y-1: 108%;
-        --s-start-1: 4.721435316336166%;
-        --s-end-1: 17.44337251571353%;
-    }
-
-    100% {
-        --c-0: hsla(245.91174854951743, 48%, 52%, 1);
-        --x-0: 82%;
-        --y-0: 72%;
-        --s-start-0: 10%;
-        --s-end-0: 51%;
-        --c-1: hsla(212.3684210526316, 72%, 58%, 1);
-        --x-1: 67%;
-        --y-1: 52%;
-        --s-start-1: 10%;
-        --s-end-1: 51%;
-    }
-}
-
-@property --c-0 {
-    syntax: '<color>';
-    inherits: false;
-    initial-value: hsla(230.02939560834102, 62%, 46%, 1)
-}
-
-@property --x-0 {
-    syntax: '<percentage>';
-    inherits: false;
-    initial-value: 63%
-}
-
-@property --y-0 {
-    syntax: '<percentage>';
-    inherits: false;
-    initial-value: 44%
-}
-
-@property --s-start-0 {
-    syntax: '<percentage>';
-    inherits: false;
-    initial-value: 10%
-}
-
-@property --s-end-0 {
-    syntax: '<percentage>';
-    inherits: false;
-    initial-value: 51%
-}
-
-@property --c-1 {
-    syntax: '<color>';
-    inherits: false;
-    initial-value: hsla(333, 53%, 100%, 1)
-}
-
-@property --x-1 {
-    syntax: '<percentage>';
-    inherits: false;
-    initial-value: 112%
-}
-
-@property --y-1 {
-    syntax: '<percentage>';
-    inherits: false;
-    initial-value: 108%
-}
-
-@property --s-start-1 {
-    syntax: '<percentage>';
-    inherits: false;
-    initial-value: 4.721435316336166%
-}
-
-@property --s-end-1 {
-    syntax: '<percentage>';
-    inherits: false;
-    initial-value: 17.44337251571353%
+    background-color: variables.$blue;
 }
 
 .information-container {
@@ -445,8 +347,9 @@
     }
 
     &__text {
-        @include variables.text(22px, #4082ff);
+        @include variables.text(22px, #80a7f0);
         font-weight: 800;
+        margin-bottom: 10px;
     }
 
     &__button {
@@ -462,6 +365,12 @@
 
         &:hover {
             transform: scale(1.2);
+        }
+
+        &[aria-selected="true"] {
+            outline: 4px solid #ffffff;
+            outline-offset: 4px;
+            transform: scale(1);
         }
     }
 
